@@ -27,14 +27,12 @@ else:
     sys.exit(1)
 
 
-def start_handler(bot, update):
-    logger.info("User {} started bot".format(update.effective_user["id"]))
+def start_handler(update: Update, context: CallbackContext):
     update.message.reply_text("Hello from Python!\nPress /random to get random number")
 
 
-def random_handler(bot, update):
+def random_handler(update: Update, context: CallbackContext):
     number = random.randint(0, 10)
-    logger.info("User {} randomed number {}".format(update.effective_user["id"], number))
     update.message.reply_text("Random number: {}".format(number))
 
 
