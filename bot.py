@@ -3,6 +3,7 @@ import os
 import random
 import sys
 
+from telegram import Update
 from telegram.ext import Updater, CommandHandler
 
 logging.basicConfig(level=logging.INFO,
